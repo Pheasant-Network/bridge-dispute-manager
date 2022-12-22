@@ -1,0 +1,12 @@
+.env
+node_modules
+build
+*.swp
+coverage
+coverage.json
+typechain
+index.mjs
+
+#Hardhat files
+cache
+artifacts

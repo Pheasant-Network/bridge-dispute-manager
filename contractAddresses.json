@@ -1,0 +1,17 @@
+{
+  "localhost": {
+    "BridgeDisputeManager": "0x97fAFd95bc0A332aA6123A8f8f369dfc492ff1D0"
+  },
+  "mumbai": {
+    "BridgeDisputeManager": "0xe993254E7156bE1018864dE49e9987fe7Dc0317C"
+  },
+  "polygon": {
+    "BridgeDisputeManager": "0x79Be215DA97cF65DBbb8608A7a7f9Ca6A28198ca"
+  },
+  "optimismGoerli": {
+    "BridgeDisputeManager": "0x39F2Eb007E727D8C8e5377f03104F842784eFccf"
+  },
+  "optimism": {
+    "BridgeDisputeManager": "0xA89C8a2d22e8C43428F376502A77946fB7826852"
+  }
+}

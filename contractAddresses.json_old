@@ -1,0 +1,8 @@
+{
+  "localhost": {
+    "BridgeDisputeManager": "0xF2f2C3140C65281C87221D96E76c5891f3524869"
+  },
+  "mumbai": {
+    "BridgeDisputeManager": "0x3d23Af30be04eBaa3960AC92c654f22Cd7A60314"
+  }
+}
