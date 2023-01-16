@@ -55,6 +55,18 @@ module.exports = {
       //gasPrice: 30000000000,
       accounts: { mnemonic: process.env.MNEMONIC }
     },
+    arbitrumGoerli: {
+      url: process.env.PROVIDER_ARBITRUM_GOERLI,
+      chainId: 421613,
+      //gasPrice: 30000000000,
+      accounts: { mnemonic: process.env.MNEMONIC }
+    },
+    arbitrum: {
+      url: process.env.PROVIDER_ARBITRUM,
+      chainId: 42161,
+      //gasPrice: 30000000000,
+      accounts: { mnemonic: process.env.MNEMONIC }
+    },
 
   },
   solidity: {

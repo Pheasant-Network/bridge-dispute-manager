@@ -3,15 +3,21 @@
     "BridgeDisputeManager": "0x97fAFd95bc0A332aA6123A8f8f369dfc492ff1D0"
   },
   "mumbai": {
-    "BridgeDisputeManager": "0xe993254E7156bE1018864dE49e9987fe7Dc0317C"
+    "BridgeDisputeManager": "0x319386A1c3EF3f6EAAC66C2f8F2159eFFbE05E66"
   },
   "polygon": {
     "BridgeDisputeManager": "0x79Be215DA97cF65DBbb8608A7a7f9Ca6A28198ca"
   },
   "optimismGoerli": {
-    "BridgeDisputeManager": "0x39F2Eb007E727D8C8e5377f03104F842784eFccf"
+    "BridgeDisputeManager": "0x7b9d1583176097E0d56212d549aa480272DF6557"
   },
   "optimism": {
+    "BridgeDisputeManager": "0xA89C8a2d22e8C43428F376502A77946fB7826852"
+  },
+  "arbitrumGoerli": {
+    "BridgeDisputeManager": "0x746AFDdC7e724cd7225F15506b63d052082AceAC"
+  },
+  "arbitrum": {
     "BridgeDisputeManager": "0xA89C8a2d22e8C43428F376502A77946fB7826852"
   }
 }

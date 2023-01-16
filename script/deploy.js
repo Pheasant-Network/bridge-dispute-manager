@@ -2,8 +2,10 @@ const hre = require("hardhat");
 const utils = require('./utils')
 const childCheckPointManagerAbi = require('../abi/PolygonChildCheckPointManager.json')
 const optimismChildCheckPointManagerAbi = require('../abi/OptimismChildCheckPointManager.json')
+const arbitrumChildCheckPointManagerAbi = require('../abi/ArbitrumChildCheckPointManager.json')
 const mainContractPath = "../v1-contracts-polygon/";
 const optimismMainContractPath = "../v1-contracts-optimism/";
+const arbitrumMainContractPath = "../v1-contracts-arbitrum/";
 
 async function main() {
   let contractAddressObj = utils.getContractAddresses()
@@ -46,6 +48,21 @@ async function main() {
       provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER_OPTIMISM_GOERLI);
     } else if (hre.network.name == "optimism") {
       provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER_OPTIMISM);
+    }
+
+  } else if (hre.network.name == "arbitrumGoerli" || hre.network.name == "arbitrum") {
+    let mainContractAddressObj = utils.getContractAddresses(arbitrumMainContractPath)
+    childCheckPointManagerAddress = mainContractAddressObj[hre.network.name].ArbitrumChildCheckPointManager;
+    const arbitrumChildCheckpointManager = await hre.ethers.getContractAt(arbitrumChildCheckPointManagerAbi, childCheckPointManagerAddress);
+    const rootTunnel = await arbitrumChildCheckpointManager.rootCheckpointManager();
+    if (rootTunnel == "0x0000000000000000000000000000000000000000") {
+      console.log("CheckPointManager doesn't inilialize!! Set tunnels first!");
+      return;
+    }
+    if (hre.network.name == "arbitrumGoerli") {
+      provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER_ARBITRUM_GOERLI);
+    } else if (hre.network.name == "arbitrum") {
+      provider = new ethers.providers.JsonRpcProvider(process.env.PROVIDER_ARBITRUM);
     }
 
   }
